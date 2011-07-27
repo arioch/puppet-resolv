@@ -1,0 +1,6 @@
+# File managed by Puppet
+
+search <%= resolv_search %>
+domain <%= resolv_domain %>
+<% resolv_nameservers.each do |ns| %>nameserver <%= ns %>
+<% end %>
