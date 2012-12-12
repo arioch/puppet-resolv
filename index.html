@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Puppet-resolv by arioch</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Puppet-resolv</h1>
+        <p>Puppet module to manage /etc/resolv.conf</p>
+
+        <p class="view"><a href="https://github.com/arioch/puppet-resolv">View the Project on GitHub <small>arioch/puppet-resolv</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/arioch/puppet-resolv/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/arioch/puppet-resolv/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/arioch/puppet-resolv">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>Puppet Resolv</h1>
+
+<h2>Requirements</h2>
+
+<h2>Tested on...</h2>
+
+<ul>
+<li>Debian 5 (Lenny)</li>
+<li>Debian 6 (Squeeze)</li>
+<li>CentOS 5</li>
+<li>CentOS 6</li>
+</ul><h2>Example usage</h2>
+
+<h3>Resolv using default settings</h3>
+
+<pre><code>node /box/ {
+  include resolv
+}
+</code></pre>
+
+<h3>Resolv using custom settings</h3>
+
+<pre><code>node /box/ {
+  class { 'resolv':
+    resolv_search      =&gt; $::fqdn,
+    resolv_domain      =&gt; $::domain,
+    resolv_nameservers =&gt; [ '208.67.220.220', '208.67.222.222' ]
+}
+</code></pre>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/arioch">arioch</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
